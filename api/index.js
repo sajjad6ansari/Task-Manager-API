@@ -1,13 +1,13 @@
 const express = require("express")
 const app = express()
-const router = require("./routes/tasks")
-const connectDB = require("./db/connect")
+const router = require("../routes/tasks")
+const connectDB = require("../db/connect")
 require("dotenv").config()
-const notFound = require("./middlewares/not-found")
-const errorHandlerMiddleware = require("./middlewares/error-handler")
+const notFound = require("../middlewares/not-found")
+const errorHandlerMiddleware = require("../middlewares/error-handler")
 
 //middleware
-app.use(express.static("./public"))
+app.use(express.static("../public"))
 app.use(express.json())
 
 // routes
